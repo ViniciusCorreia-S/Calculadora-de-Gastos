@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio da Sprint</title>
+</head>
+<body>
+    
+<script>
+    function Verificar (text) {
+    let distancia = text
+    while (isNaN(distancia)|| distancia <=0) {
+    alert("Tente Novamente!");
+    distancia = (parseFloat(prompt ("Escreva um número valido!")));
+    }
+    return distancia
+}
+
+function quebraLinha () {
+    document.write("<br>")
+}
+function Html (text3) {
+    document.write(text3)
+    quebraLinha()
+    
+}
+
+
+let distancia = Verificar(parseFloat (prompt ("Qual a distância percorrida de sua casa até seu trabalho (em km)?")));
+let consumoMedio = Verificar (parseFloat (prompt ("Qual o consumo médio do veículo (em Km/L)?")));
+
+let consumoNecessario = parseFloat (distancia / consumoMedio);
+let Litros = consumoNecessario != 1? "Litros" : "Litro";
+Html(`O consumo necessário é de ${consumoNecessario.toFixed(2)} ${Litros}.`);
+
+
+let postos = Verificar(parseInt (prompt("Em quantos postos você pesquisou?")));
+let i = 0;
+
+let valorT = 0;
+let ValorPosto = 0;
+let menorvalor = Infinity;
+
+for(i=0;i<postos;i++) {
+    ValorPosto = Verificar (parseFloat (prompt(`Digite o valor encontrado (em R$) no posto ${i+1}`)));
+
+    if (ValorPosto < menorvalor){
+        menorvalor = ValorPosto;
+    }
+    valorT = valorT + ValorPosto;
+}
+
+
+Html(`O menor valor encontrado foi ${menorvalor.toFixed(2)}.`);
+
+
+let media = parseFloat (valorT / menorvalor);
+Html(`A média dos valores é ${media.toFixed(2)}.`);
+
+
+let gastoDiario = 2*(consumoNecessario * menorvalor);
+Html(`O gasto diario (Ida e volta) é R$ ${gastoDiario.toFixed(2)}.`);
+</script>
+
+</body>
+</html>
