@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio da Sprint</title>
+    <link rel="stylesheet" href="D2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="fotos">
+        <div class="logo" >
+             <img src="fotos/logo ford.png" alt="logo da ford">
+        </div>
+        <div class="banner">
+             <img style="width: 600px;" src="fotos/Banner_Ford_.webp" alt="banner da ford">
+        </div>
+    </div>
+
+    <div class="calculadora" id="Pag_1">
+        <div class="h1">
+            <h1><br>Combustível++</h1>
+       </div>
+        <div class="p">
+            <p><strong>Calcule o seu consumo aqui!</strong></p> <br><br>
+       </div>
+        <div class="p2">
+            <p>Qual a distância percorrida de sua casa até seu trabalho (em km)?</p><br>
+        </div>
+        <div class="inputN">
+            <input style="width: 400px; height: 25px;" type="number" id="imput1" placeholder="Digite aqui"><br><br><br><br>
+        </div>
+        <div class="p2">
+            <p>Qual o consumo médio do veículo (em Km/L)?</p><br>
+        </div>
+        <div class="inputN">
+            <input style="width: 400px; height: 25px;" type="number" id="imput2" placeholder="Digite aqui"><br><br><br><br>
+        </div>
+        <div class="p2">
+            <p>Em quantos postos você pesquisou?</p><br>
+        </div>
+        <div class="inputN">
+            <input style="width: 400px; height: 25px;" type="number" id="input3" placeholder="Digite aqui"><br>
+        </div>
+        <div>
+            <br>
+            <button onclick="prosseguir1()" style="margin-left: 450px;">Prosseguir</button>
+        </div>
+    </div>
+
+
+    <div class="calculadora2" id="Pag_2">
+        <div class="p2">
+            <br>
+            <br>
+            <p> Digite o valor encontrado (em R$) no :</p>
+        </div>
+        <div>
+            <br>
+            <p>
+                 Posto <span id="ContagemP">1</span>
+            </p>
+        </div>
+        <div class="inputN">
+            <input style="width: 120px; height: 25px;" type="number" id="inputPosto" placeholder="Digite aqui">
+        </div>
+        <div id="Botao_Posto">
+            <button onclick="proximoP()"style="margin-top: 20px;">Próximo</button>
+        </div>
+        
+        <div>
+            <br>
+            <br>
+            <button id="B_enviar" onclick="enviar()"style="margin-left: 450px;">Enviar</button>
+        </div>
+        
+
+    </div>
+<br><br>
+
+    <div class="Resultado" id="Pag_3">
+        
+        <div class="h1">
+            <br>
+            <h1>Resultado :</h1>
+        </div>
+        <br>
+            <div id="resut1" class="p">
+                O consumo necessário é de: 
+            </div>
+            <br>
+            <div id="resut2" class="p">
+                O menor valor encontrado foi: 
+            </div>
+            <br>
+            <div id="resut3" class="p">
+                A média dos valores é:
+            </div>
+            <br>
+            <div id="resut4" class="p">
+                O gasto diario (Ida e volta) é: 
+            </div>
+    </div>
+
+
+<script src = "D2.js"></script>
+
+</body>
+</html>
