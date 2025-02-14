@@ -19,27 +19,19 @@ function Html (text3) {
     
 }
 
-let menorvalorP = 0;
-let i=0;
-let ValorPosto = 0
-let media = 0
-let consumoNecessario = 0
-let gastoDiario = 0
-let valorT = 0
-let postos = 0
-let consumoMedio = 0
-let distancia = 0
+
 
 function prosseguir1() {
     
-    distancia = Verificar(parseFloat (document.getElementById("imput1").value));
-    consumoMedio = Verificar(parseFloat (document.getElementById("imput2").value));
+    let distancia = Verificar(parseFloat (document.getElementById("imput1").value));
+   let  consumoMedio = Verificar(parseFloat (document.getElementById("imput2").value));
     console.log(distancia)
     console.log(consumoMedio)
     
 
+    
 
-    postos = Verificar(parseInt(document.getElementById("input3").value));
+    let postos = Verificar(parseInt(document.getElementById("input3").value));
     
 
     if (distancia && consumoMedio && postos){
@@ -51,9 +43,9 @@ function prosseguir1() {
         document.getElementById("Pag_1").style ="display:block";
     }
 
-    consumoNecessario = parseFloat(distancia / consumoMedio);
-    media = parseFloat(valorT / menorvalorP);
-    gastoDiario = 2*(consumoNecessario * menorvalorP);
+    let consumoNecessario = parseFloat(distancia / consumoMedio);
+    let media = parseFloat(valorT / menorvalorP);
+    let gastoDiario = 2*(consumoNecessario * menorvalorP);
 
     console.log(consumoNecessario)
     console.log(menorvalorP)
@@ -68,18 +60,18 @@ function prosseguir1() {
     document.getElementById("Pag_2").style ="display:block";
 }
 
-let contagem_Posto = 2;  
+    let contagem_Posto = 2; 
 
 function proximoP () {
 
-    menorvalorP = Infinity
-    for(let i=0;i<postos;i++) {
-        ValorPosto = Verificar (parseFloat (document.getElementById("inputPosto").value));
+    let menorvalorP = Infinity
+    
+       let ValorPosto = Verificar (parseFloat (document.getElementById("inputPosto").value));
         if (menorvalorP < ValorPosto){
             menorvalorP = ValorPosto;
         }
-    }
-    valorT = valorT + ValorPosto
+    
+    let valorT = valorT + ValorPosto
     
     // console.log(document.getElementById("inputPosto").value)
     let Ipostos = Verificar(parseFloat(document.getElementById("inputPosto").value));
